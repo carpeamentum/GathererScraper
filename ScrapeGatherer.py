@@ -4,12 +4,12 @@ import requests
 import os
 import sys
 from StringIO import StringIO
-
+import easygui
 
 color_folders=True
 if len(sys.argv)<2:
-    set_name = raw_input("Which set would you like pictures for? " )
-    print set_name
+    set_name = easygui.enterbox("Which set would you like pictures for? ", "Gatherer Scraper" )
+    print "Downloading :" + set_name
 
 else:
     if len(sys.argv)>2:
